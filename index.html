@@ -3,90 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Martin Riggs – Support My Work</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9; color: #333;
     }
     header {
-      background: linear-gradient(135deg, #4a90e2, #9013fe);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
+      background: #222; color: #fff;
+      padding: 1.5rem; text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    header h1 { margin: 0; font-size: 2rem; }
+    header h2 { margin: 0.5rem 0 0; font-weight: 400; }
+    nav {
+      display: flex; justify-content: center;
+      background: #eee; padding: 0.5rem;
+    }
+    nav a {
+      margin: 0 1rem; text-decoration: none;
+      color: #333; font-weight: 500;
     }
     section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
+      max-width: 800px; margin: 2rem auto;
+      padding: 1rem; text-align: center;
     }
-    h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
-      color: #4a90e2;
+    .btn {
+      display: inline-block; margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #4a90e2; color: #fff;
+      border-radius: 5px; text-decoration: none;
+      transition: background 0.2s;
     }
-    .projects ul {
-      list-style: none;
-      padding: 0;
-    }
-    .projects li {
-      background: #fff;
-      margin: 0.5rem 0;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .projects li:hover {
-      transform: scale(1.02);
-    }
+    .btn:hover { background: #357ab8; }
     footer {
-      text-align: center;
-      padding: 1rem;
-      background: #eee;
-      font-size: 0.9rem;
+      text-align: center; padding: 1rem;
+      background: #eee; font-size: 0.9rem;
     }
-    /* Responsive */
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      section {
-        margin: 1rem;
-      }
+      nav { flex-direction: column; }
+      nav a { margin: 0.5rem 0; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Rafael Martin – Portfolio</h1>
-    <p>Data Analyst & Creative Projects</p>
+    <h1>Martin Riggs</h1>
+    <h2>Support My Work</h2>
   </header>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>Hello! I’m Rafael, a bilingual data analyst and artist. I specialize in workflow optimization, visualization, and creative documentation.</p>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#me">Me</a>
+    <a href="#courses">Courses</a>
+    <a href="#articles">Articles</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Support My Work</h2>
+    <p>If you’d like to support my projects, you can do so securely:</p>
+    <!-- PayPal -->
+    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+      <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID" />
+      <input type="submit" class="btn" value="Donate via PayPal" />
+    </form>
+    <!-- Mercado Pago -->
+    <a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=YOUR_PREF_ID" 
+       target="_blank" class="btn">Support via Mercado Pago</a>
   </section>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>📊 Power BI Dashboard – Campaign KPIs</li>
-      <li>📚 Bilingual Glossary – English–Spanish Technical Terms</li>
-      <li>🎨 Art + Data Case Study – History through Visualization</li>
+  <!-- Me Section -->
+  <section id="me">
+    <h2>About Me</h2>
+    <p>I’m Martin Riggs, passionate about data, art, and sharing knowledge. 
+       This space is where I connect with people who enjoy my work.</p>
+    <a href="#home" class="btn">Back to Home</a>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses">
+    <h2>Courses Completed</h2>
+    <ul style="list-style:none; padding:0;">
+      <li>Preparing Data for Analysis</li>
+      <li>Harnessing Power BI</li>
+      <li>Intro to Data Analysis using Excel</li>
+      <!-- Add more as needed -->
     </ul>
+    <a href="#home" class="btn">Back to Home</a>
+  </section>
+
+  <!-- Articles Section -->
+  <section id="articles">
+    <h2>Articles</h2>
+    <p>Here I share facts, jokes, news, and stories that inspire me.</p>
+    <p>Example: “Did you know the first computer bug was literally a moth?”</p>
+    <a href="#home" class="btn">Back to Home</a>
   </section>
 
   <footer>
-    <p>&copy; 2026 Rafael Martin. All rights reserved.</p>
-    <button onclick="alert('Thanks for visiting my portfolio!')">Say Hi</button>
+    <p>&copy; 2026 Martin Riggs. All rights reserved.</p>
   </footer>
 </body>
 </html>
