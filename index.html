@@ -259,7 +259,8 @@ function update() {
   renderChips();
   $("sym").textContent = currency === "USD" ? "US$" : "MX$";
   const amt = Math.round(amount * 100) / 100;
-  $("paypal").href = `https://www.paypal.me/${CONFIG.paypalUser}/${amt}${currency}`;
+<a class="btn paypal" id="paypal" href= "https://www.paypal.com/donate?hosted_button_id=N9EBYZ8UTYKW4" target="_blank" rel="noopener">
+
   $("mp").href = CONFIG.mercadoPagoLink;
   $("kofi").href = CONFIG.kofiLink;
   const usd = currency === "USD" ? amt : amt / 18;   // rough MXN→USD for heart size only
