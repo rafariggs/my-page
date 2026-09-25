@@ -259,13 +259,13 @@ function update() {
   renderChips();
   $("sym").textContent = currency === "USD" ? "US$" : "MX$";
   const amt = Math.round(amount * 100) / 100;
-<a class="btn paypal" id="paypal" href= "https://www.paypal.com/donate?hosted_button_id=N9EBYZ8UTYKW4" target="_blank" rel="noopener">
-
+  $("paypal").href = "https://www.paypal.com/donate?hosted_button_id=N9EBYZ8UTYKW4";
   $("mp").href = CONFIG.mercadoPagoLink;
   $("kofi").href = CONFIG.kofiLink;
-  const usd = currency === "USD" ? amt : amt / 18;   // rough MXN→USD for heart size only
+  const usd = currency === "USD" ? amt : amt / 18;
   $("heart").style.setProperty("--s", Math.min(1.35, 0.85 + usd / 150).toFixed(2));
 }
+
 
 /* Bank box */
 $("bankName").textContent = CONFIG.bank.name;
